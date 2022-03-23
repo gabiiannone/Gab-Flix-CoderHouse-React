@@ -1,0 +1,17 @@
+
+.navbar{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  
+  ul.navbar li{
+    align-items: center;
+    margin-right: 15px;
+   }
+   ul.navbar li button{
+    background-color: rgb(114, 114, 187);
+    color: whitesmoke;
+   }
