@@ -1,11 +1,15 @@
 import './App.css';
+import React, {useState, useffect} from 'react';
 import  NavBar from './components/NavBar/NavBar';
 import './logo.svg';
 import ListProducts from './components/ListProducts/ListProducts'; 
 
 
 
+
 function App() {
+
+  
   return (
     <header class="titulos">
           
@@ -16,7 +20,13 @@ function App() {
      <h1>VIDEO JUEGOS</h1>
     
      <ListProducts />
-  
+     <ListProducts />
+     <ListProducts />
+     <ListProducts />
+     <ListProducts />
+     <ListProducts />
+
+     
     </div>
     </header>
   );
