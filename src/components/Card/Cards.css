@@ -18,3 +18,8 @@
     text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87
     
   }
+
+ .botonAgregar{
+   background-color: rgb(149, 149, 173);
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ }
