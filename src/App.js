@@ -2,7 +2,7 @@ import './App.css';
 import React, {useState, useffect} from 'react';
 import  NavBar from './components/NavBar/NavBar';
 import './logo.svg';
-import ListProducts from './components/ListProducts/ListProducts'; 
+import ItemListContainer from './components/ItemListContainer/ItemListcontainer'; 
 
 
 
@@ -19,14 +19,12 @@ function App() {
      <NavBar />
      <h1>VIDEO JUEGOS</h1>
     
-     <ListProducts />
-     <ListProducts />
-     <ListProducts />
-     <ListProducts />
-     <ListProducts />
-     <ListProducts />
-
-     
+     <ItemListContainer />
+     <ItemListContainer />
+     <ItemListContainer />
+     <ItemListContainer />
+     <ItemListContainer />
+     <ItemListContainer />
     </div>
     </header>
   );

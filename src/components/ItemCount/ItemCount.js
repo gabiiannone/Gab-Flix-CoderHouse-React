@@ -11,10 +11,11 @@ const ItemCount = ({stock}) => {
     }
     return(
         <>
-        <button> - </button>
-        <p> {count} </p>
-        <button onClick={onAdd}> + </button>
+        <button className="botonCount"> - </button>
+        <p className="botonTotal"> {count} </p>
+        <button className="botonCount" onClick={onAdd}> + </button>
         <>
+        <br></br>
         <button className="botonAgregar"> Agregar </button>
         
         </>

@@ -20,6 +20,27 @@
   }
 
  .botonAgregar{
-   background-color: rgb(149, 149, 173);
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
- }
+  background-color: rgb(94, 94, 173);
+  border: none;
+  font-family: var(--mulish-font);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 20px auto;
+  width: 112px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.botonCount{
+  color:rgb(94, 94, 173) ;
+  width: 50%;
+  height: 50%;
+  border: 1px solid rgb(94, 94, 173);
+  font-size: 1.6rem;
+  transition: all 250ms ease-out;
+}
+.botonCount:hover {
+  border: none;
+  color: var(--just-white);
+  background-color: var(--primary-color);
+}
