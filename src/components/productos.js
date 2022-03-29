@@ -1,6 +1,6 @@
 export const productList = [
     {
-        imagen: "https://arsonyb2c.vtexassets.com/arquivos/ids/353864/ps5-Spiderman-cover.jpg?v=637401041517630000",  
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSEcuKe6OVCxMDjH4DmKxbka_32xKUQGKTww&usqp=CAU",  
         titulo:"Spiderman",
         consola:"PS5",
         precio:8000,
@@ -8,7 +8,7 @@ export const productList = [
         id:1
     },
     {
-        imagen: "https://arsonyb2c.vtexassets.com/arquivos/ids/353864/ps5-Spiderman-cover.jpg?v=637401041517630000",  
+        imagen: "https://spacegamer.com.ar/img/Public/1058-producto-1019-producto-fifa-22-ps5-100-833.jpg",  
         titulo:"Fifa 2022",
         consola:"PS5",
         precio:15000,
@@ -16,7 +16,7 @@ export const productList = [
         id:2
     },
     {
-        imagen: "https://arsonyb2c.vtexassets.com/arquivos/ids/353864/ps5-Spiderman-cover.jpg?v=637401041517630000",  
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE4ax64WzDWwDaX7FuMZ-WuHdlmocH-pmjpQ&usqp=CAU",  
         titulo:"GTA trilogy",
         consola:"PS5",
         precio:12000,
@@ -24,7 +24,7 @@ export const productList = [
         id:3
     },
     {
-        imagen: "https://arsonyb2c.vtexassets.com/arquivos/ids/353864/ps5-Spiderman-cover.jpg?v=637401041517630000",  
+        imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjHmYKo-l29W6pHIxj-0AW_DBI2JFUyoFAuQ&usqp=CAU",
         titulo:"Gran Turismo 7",
         consola:"PS5",
         precio:12000,
@@ -32,7 +32,7 @@ export const productList = [
         id:4
     },    
     {
-        imagen: "https://arsonyb2c.vtexassets.com/arquivos/ids/353864/ps5-Spiderman-cover.jpg?v=637401041517630000",  
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxGWbiB0BbQcx-FRgig-2uHmVWND74y7i9CQ&usqp=CAU",  
         titulo:"Assassins Creed Valhalla",
         consola:"PS5",
         precio:10000,
@@ -40,7 +40,7 @@ export const productList = [
         id:5
     },
     {
-        imagen: "https://arsonyb2c.vtexassets.com/arquivos/ids/353864/ps5-Spiderman-cover.jpg?v=637401041517630000",  
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyYPnOabDAeXGojINyrCx6O--7tFiJm_RMz8BpeDsHjfhfSKBTQKMZhZWLciXuWoGqBE&usqp=CAU",
         titulo:"Crash Bandicoot 4",
         consola:"PS5",
         precio:8000,
