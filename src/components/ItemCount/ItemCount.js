@@ -1,30 +1,58 @@
 import React,{useState} from 'react'
-const ItemCount = ({stock}) => {
-    const [count, setCount] = useState(1)
+
+
+const ItemCount = ({initial, stock, onAdd}) => {
+
+    const [count, setCount] = useState(initial);
     
 
-    const onAdd = () =>{
-        if(count < stock) {
-            setCount(count + 1 )
-        }
+    const addProduct = (num) =>{
+        setCount(count + num);
+
+       // if(count < stock) {
+          //  setCount(count + 1 )
+       // }
        
     }
+
     return(
+        <div className='contador'>
         <>
-        <button className="botonCount"> - </button>
-        <p className="botonTotal"> {count} </p>
-        <button className="botonCount" onClick={onAdd}> + </button>
+        <button
+            className="botonCount"
+            onClick={() => addProduct(-1)}
+            disabled={count === initial ? true : null}
+            > - 
+        </button>
+
+        <span className="botonTotal"> {count} </span>
+
+        <button
+             className="botonCount"
+             onClick={() => addProduct(+1)}
+             disabled={count === stock ? true : null}
+        > + 
+        </button>
         <>
         <br></br>
-        <button className="botonAgregar"> Agregar </button>
+
+        <button
+             className="botonAgregar"
+             onClick={() => onAdd(count)}
+             disabled={stock === 0 ? true : null}
+        > 
+        Agregar 
+        </button>
         
         </>
         
 
         </>
-
+        </div>
     )
 
 }
 
 export default ItemCount
+
+
