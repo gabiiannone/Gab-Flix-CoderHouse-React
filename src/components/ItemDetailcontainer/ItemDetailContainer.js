@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import ItemDetail from "../ItemDetail/ItemDetail";
-import mockProducto from "../productMock";
+import mockProducto from '../Utils/productMock';
 
 const ItemDetailContainer = () => {
     const [dataProduct, setDataProduct] = useState({})
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
     return (
         <>
         
-        <ItemDetail data={dataProduct}/>
+       <ItemDetail data={dataProduct}/>
         </>
 
     )

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import Cards from '../Card/Cards'
-import {productList}  from '../productos';
+import {productList}  from '../Utils/productos';
 
 
 
