@@ -1,15 +1,15 @@
 
 .cards-items{
-    object-fit: contain;
-    float: left;
-    border: 1px solid rgb(94, 94, 173);
-    width: 200px;
-    margin-left: 20px;
-    box-shadow: 1px 1px 5px rgb(48, 48, 90);
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    color: antiquewhite;
+  object-fit: contain;
+  float: left;
+  border: 1px solid rgb(94, 94, 173);
+  width: 200px;
+  margin-left: 20px;
+  box-shadow: 1px 1px 5px rgb(48, 48, 90);
+  border-radius: 5px;
+  justify-content: center;
+  color: antiquewhite;
+  text-align: center;
   }
   
   .titulos h1{
@@ -70,3 +70,10 @@
   background-color: var(--just-white);
 }
 
+
+@media (max-width: 560px) {
+  .cards-items{
+      grid-template-columns: 100%;
+
+  }
+}  

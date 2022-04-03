@@ -99,3 +99,12 @@ p.info_text_detail_text{
   color: antiquewhite;
 
 }
+
+
+@media (max-width: 560px) {
+  .imagenHeader{
+     width: 90%;
+     height: auto;
+
+  }
+}  
