@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import Cards from '../Card/Cards'
 import {productList}  from '../Utils/productos';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -46,8 +46,10 @@ const ItemList = () => {
                 <div key={product.id}>
                   <Cards
                     data={product}
-                    
+                   
                   />
+                   
+                    
                 </div>
               );
             })
