@@ -2,6 +2,7 @@ import styles from "./Pelis.module.css";
 
 
 export function PelisCard({pelicula}) {
+   
     const imageUrl = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path;
     return <li className={styles.peliCard}>
             <img 

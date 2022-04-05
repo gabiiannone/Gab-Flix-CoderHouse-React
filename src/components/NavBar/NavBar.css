@@ -5,13 +5,17 @@
     align-items: center;
     
     
+    
   }
   
   ul.navbar li{
     align-items: center;
     margin-right: 15px;
+    
    }
    ul.navbar li button{
+    text-decoration: none;
+    text-decoration-color: none ;
     background-color: rgb(114, 114, 187);
     color: whitesmoke;
    }

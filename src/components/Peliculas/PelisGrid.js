@@ -4,12 +4,15 @@ import { PelisCard } from './PelisCards';
 
 
 export function PelisGrid() {
-    console.log(peliculas);
+  
+    
   return (
+    
     <ul className={styles.peliGrid}>
       {peliculas.map((pelicula) => 
       
       <PelisCard key={pelicula.id} pelicula={pelicula}/>  )}
     </ul>
+
   );
 }

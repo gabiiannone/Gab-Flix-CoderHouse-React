@@ -1,5 +1,6 @@
 import React from "react"
 import Button from '@mui/material/Button'
+import {Link} from "react-router-dom";
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 
@@ -11,13 +12,32 @@ function NavBar() {
             <img className="imagenHeader" src="Logo1.png"  />
         </div>
         <ul className='navbar'>
-            <li> <Button variant="contained">Registrarse</Button> </li>
-            <li> <Button variant="contained">Iniciar Sesion</Button></li>
-            <li> <Button variant="contained" >Peliculas</Button></li>
-            <li> <Button variant="contained">Series</Button></li>
-            <li> <Button variant="contained" >Video juegos</Button></li>
+             <li> <Button variant="contained">
+                         <Link to="/">Home</Link>
+                 </Button> 
+            </li>
+            <li> <Button variant="contained">
+                         <Link to="/registrarse">Registrarse</Link>
+                </Button> 
+            </li>
+            <li> <Button variant="contained">
+                         <Link to="/iniciar_sesion">Iniciar Sesion</Link> 
+                 </Button>
+            </li>
+            <li> <Button variant="contained" >
+                        <Link to="/peliculas">Peliculas</Link>
+                </Button>
+            </li>
+            <li> <Button variant="contained">
+                        <Link to="/series">Series</Link>
+                </Button>
+            </li>
+            <li> <Button variant="contained" >
+                        <Link to="/video_juegos">Video juegos</Link>
+                </Button>
+            </li>
         </ul>
-        <CartWidget/>
+        <Link to="/carrito"><CartWidget/></Link> 
        
      </header>
     )
