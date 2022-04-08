@@ -45,6 +45,7 @@ export const productList = [
         consola:"PS5",
         precio:8000,
         stock:15,
+        description:"Crash Bandicoot 4: It's About Time es un videojuego de plataformas, diseñado por Toys for Bob y publicado por Activision. El videojuego es la octava entrega de la serie Crash Bandicoot, secuela de Crash Bandicoot N. Sane Trilogy y que toma lugar después de los eventos de Crash Bandicoot 3: Warped",
         id:6
     },
     {

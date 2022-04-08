@@ -12,7 +12,7 @@
   text-align: center;
   }
   
-  .titulos h1{
+  .titulos{
     
     text-align: center;
     font-size: 3rem;
@@ -77,3 +77,9 @@
 
   }
 }  
+
+.loader {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}

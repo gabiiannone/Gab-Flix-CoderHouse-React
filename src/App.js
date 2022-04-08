@@ -4,40 +4,36 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import "./logo.svg";
 import ItemListContainer from "./components/ItemListContainer/ItemListcontainer";
-import { PelisGrid } from "./components/Peliculas/PelisGrid";
+import  {PelisGrid}  from "./components/Peliculas/PelisGrid";
 //import ItemDetailContainer from './components/ItemDetailcontainer/ItemDetailContainer';
 import NotFoundPage from "./pages/NotFoundPage";
+import ItemDetail from "./components/ItemDetail/ItemDetail";
 
 
 function App() {
   return (
     <BrowserRouter>
-      <header class="titulos">
-         <div className="App">
-
-        <NavBar />
-
-        
+        <div   className="App">
        
-      <Routes>
-        <Route path="/" element={ <ItemListContainer /> }  />
-        <Route path="/registrarse" element={ <h1>REGISTRARSE</h1> }  />
-        <Route path="/iniciar_sesion" element={ <h1>INICIAR SESION</h1> }  />
-        <Route path="peliculas" element={ <h1>PELICULAS</h1> }  />
-        <Route path="series" element={ <h1>SERIES</h1> }  />
-        <Route path="video_juegos" element={ <h1>VIDEO JUEGOS</h1> }  />
-        <Route path="carrito" element={ <h1>TU CARRITO</h1> }  />
+        <NavBar />
+           
+        <Routes>
+        
+        <Route path="/" element={  <h1  class="titulos" >BIENVENIDOS</h1> }  />
+        <Route path="/registrarse" element={ <h1  class="titulos" >REGISTRARSE</h1> }  />
+        <Route path="/iniciar_sesion" element={ <h1 class="titulos"  >INICIAR SESION</h1> }  />
+        <Route path="peliculas" element={ <PelisGrid/> }  />
+        <Route path="series" element={ <h1 class="titulos"  >SERIES</h1> }  />
+        <Route path="video_juegos" element={ <ItemListContainer /> }  />
+        <Route path="carrito" element={ <h1 class="titulos" >TU CARRITO</h1> }  />
         <Route path="*" element={ <NotFoundPage /> }  />
+        
       </Routes>
-       <main>
-       <h1>PELICULAS</h1>  
-       <PelisGrid/>
-
-             
-            </main>
-        </div>
-      </header>
+       </div>
+     
     </BrowserRouter>
+   
+  
   );
 }
 

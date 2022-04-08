@@ -1,10 +1,11 @@
 import styles from "./Pelis.module.css";
 
 
-export function PelisCard({pelicula}) {
-   
+export function PelisCards  ({pelicula})  {
+
+    
     const imageUrl = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path;
-    return <li className={styles.peliCard}>
+    return   <li className={styles.peliCard}>
             <img 
              width={230}
              height={345}
@@ -13,3 +14,8 @@ export function PelisCard({pelicula}) {
             <div>{pelicula.title}</div>
             </li>;
 }
+
+
+
+
+  

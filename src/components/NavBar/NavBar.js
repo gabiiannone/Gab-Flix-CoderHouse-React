@@ -13,27 +13,27 @@ function NavBar() {
         </div>
         <ul className='navbar'>
              <li> <Button variant="contained">
-                         <Link to="/">Home</Link>
+                         <Link className="link" to="/">Home</Link>
                  </Button> 
             </li>
             <li> <Button variant="contained">
-                         <Link to="/registrarse">Registrarse</Link>
+                         <Link className="link"to="/registrarse">Registrarse</Link>
                 </Button> 
             </li>
             <li> <Button variant="contained">
-                         <Link to="/iniciar_sesion">Iniciar Sesion</Link> 
+                         <Link className="link" to="/iniciar_sesion">Iniciar Sesion</Link> 
                  </Button>
             </li>
             <li> <Button variant="contained" >
-                        <Link to="/peliculas">Peliculas</Link>
+                        <Link className="link" to="/peliculas">Peliculas</Link>
                 </Button>
             </li>
             <li> <Button variant="contained">
-                        <Link to="/series">Series</Link>
+                        <Link className="link" to="/series">Series</Link>
                 </Button>
             </li>
             <li> <Button variant="contained" >
-                        <Link to="/video_juegos">Video juegos</Link>
+                        <Link className="link" to="/video_juegos">Video juegos</Link>
                 </Button>
             </li>
         </ul>

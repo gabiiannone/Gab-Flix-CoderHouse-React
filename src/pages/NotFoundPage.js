@@ -6,7 +6,7 @@ const NotFoundPage = () => {
     return (
         <Container>
         <div>
-            <h1>ERROR 404 * No se encuentra la pagina solicitada</h1>
+            <h1 class="titulos" >ERROR 404 * No se encuentra la pagina solicitada</h1>
         </div>
         </Container>
     )

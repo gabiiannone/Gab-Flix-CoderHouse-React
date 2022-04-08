@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
+import { Thumbs } from 'swiper';
 import Cards from '../Card/Cards'
 import {productList}  from '../Utils/productos';
 
@@ -58,7 +59,8 @@ const ItemList = () => {
       ) : (
         
         
-        <p>Cargando productos...</p>
+        <p className='loader'>Cargando productos...</p>
+        
       )
         
       }

@@ -5,9 +5,9 @@ export default function Cards({data}) {
 
 const {imagen,titulo, consola, precio,stock,id} = data
         //nombre //funcion   //se puede pasar string, num
-const onAdd = (count) => {
-    alert(`Has agregado ${count}, ${titulo}`);
-}
+ /*const onAdd = (count) => {
+            alert(`Has agregado ${count}, ${titulo}`);
+        }*/
     return(
         
         <div className="cards-items">
@@ -16,7 +16,7 @@ const onAdd = (count) => {
             <p>Consola: {consola}</p>
             <p>Precio: $ {precio}</p>
            
-            <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
+            
            
          </div>       
     

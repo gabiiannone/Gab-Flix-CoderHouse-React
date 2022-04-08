@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ItemDetail from "../ItemDetail/ItemDetail";
-import mockProducto from '../Utils/productMock';
+import productos from '../Utils/productos';
 
 const ItemDetailContainer = () => {
     const [dataProduct, setDataProduct] = useState({})
@@ -8,18 +8,22 @@ const ItemDetailContainer = () => {
     const getProduct = () => {
 
         return new Promise((resolve,reject) => {
-            return resolve(mockProducto)
+            return resolve(productos)
         })
     }
 
     useEffect(  () => {
-        getProduct().then( (producto) => {
-            setDataProduct(producto)
-            console.log("Llamada al mock: ",producto)
+        getProduct().then( (productos) => {
+            setDataProduct(productos)
+            console.log("Llamada al mock: ",productos)
         }). finally( () => {
             console.log("Termino la llamada")
         })
     }, [])
+
+    const onAdd = (count,titulo) => {
+        alert(`Has agregado ${count}, ${titulo}`);
+    }
 
     return (
         <>

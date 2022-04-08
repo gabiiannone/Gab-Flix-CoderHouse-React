@@ -1,26 +1,35 @@
-import React,{useState} from 'react'
-
+import React,{useState} from 'react';
+import {Button} from "react-bootstrap";
 
 const ItemCount = ({initial, stock, onAdd}) => {
 
     const [count, setCount] = useState(initial);
     
 
-    const addProduct = (num) =>{
-        setCount(count + num);
+    const addProduct = () =>{
+        if (count<= stock) setCount(count + 1);
+    };
+
+    const remProduct = () =>{
+        if (count > initial) setCount(count - 1);
+    }
+
+
+        //setCount(count + num);
 
        // if(count < stock) {
           //  setCount(count + 1 )
        // }
        
-    }
+    
 
     return(
+
         <div className='contador'>
         <>
         <button
             className="botonCount"
-            onClick={() => addProduct(-1)}
+            onClick={() => remProduct(-1)}
             disabled={count === initial ? true : null}
             > - 
         </button>
@@ -49,8 +58,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
         </>
         </div>
-    )
-
+    
+    );
 }
 
 export default ItemCount
