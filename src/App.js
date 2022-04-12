@@ -9,6 +9,7 @@ import  {PelisGrid}  from "./components/Peliculas/PelisGrid";
 import ItemDetailContainer from './components/ItemDetailcontainer/ItemDetailContainer';
 import NotFoundPage from "./pages/NotFoundPage";
 import { MovieDetails } from "./pages/MovieDetails";
+import JuegosDetails from "./pages/JuegosDetails";
 
 
 
@@ -27,7 +28,8 @@ function App() {
         <Route path="/peliculas" element={ <PelisGrid/> }  />
         <Route path="/peliculas/:peliculaId" element={ <MovieDetails/> }  />
         <Route path="series" element={ <h1 class="titulos"  >SERIES</h1> }  />
-        <Route path="video_juegos" element={ <ItemListContainer /> }  />
+        <Route path="/video_juegos" element={ <ItemListContainer /> }  />
+        <Route path="/video_juegos/:dataId" element={ <JuegosDetails /> }  />
         <Route path="carrito" element={ <h1 class="titulos" >TU CARRITO</h1> }  />
         <Route path="*" element={ <NotFoundPage /> }  />
         
