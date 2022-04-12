@@ -5,6 +5,10 @@
 
 }
 
+.peliCard:hover {
+    opacity: 0.8;
+}
+
 .peliImage{
     border-radius: 10px;
     background-color: beige;
@@ -37,3 +41,4 @@
         
     }
 }  
+
