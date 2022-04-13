@@ -49,9 +49,9 @@ const ItemList = () => {
                     data={product}
                    
                   />
-                   
                     
                 </div>
+                
               );
             })
           }

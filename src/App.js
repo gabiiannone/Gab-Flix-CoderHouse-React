@@ -10,11 +10,15 @@ import ItemDetailContainer from './components/ItemDetailcontainer/ItemDetailCont
 import NotFoundPage from "./pages/NotFoundPage";
 import { MovieDetails } from "./pages/MovieDetails";
 import JuegosDetails from "./pages/JuegosDetails";
+import { CartProvider } from "./components/CartWidget/CartContext";
+import CartWidget from "./components/CartWidget/CartWidget";
+
 
 
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
         <div   className="App">
        
@@ -29,8 +33,8 @@ function App() {
         <Route path="/peliculas/:peliculaId" element={ <MovieDetails/> }  />
         <Route path="series" element={ <h1 class="titulos"  >SERIES</h1> }  />
         <Route path="/video_juegos" element={ <ItemListContainer /> }  />
-        <Route path="/video_juegos/:dataId" element={ <JuegosDetails /> }  />
-        <Route path="carrito" element={ <h1 class="titulos" >TU CARRITO</h1> }  />
+        <Route path="/video_juegos/:id" element={<JuegosDetails/> }  />
+        <Route path="/carrito/:id" element={ <CartWidget/> }  />
         <Route path="*" element={ <NotFoundPage /> }  />
         
       </Routes>
@@ -38,7 +42,7 @@ function App() {
      
     </BrowserRouter>
    
-  
+    </CartProvider>
   );
 }
 

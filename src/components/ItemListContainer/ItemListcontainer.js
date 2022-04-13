@@ -14,10 +14,10 @@ const ItemListContainer = () => {
         <h1  class="titulos" >VIDEO JUEGOS</h1>   
            
                 <ItemList />
-                  
+               
             
         </div>
-    ) 
+      
 }     
 
 export default ItemListContainer;

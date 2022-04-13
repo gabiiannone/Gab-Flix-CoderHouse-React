@@ -2,15 +2,16 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import productList from "../components/Utils/productos";
+import productList  from '../components/Utils/productos';
 
 const JuegosDetails = () => {
-    const { dataId } = useParams()
+    
+    const { id } = useParams();
     const [data, setProduct] = useState({})
 
     useEffect( () => {
-        filterProductById(productList, dataId)
-    }, [dataId])
+        filterProductById(productList, id)
+    }, [id])
 
     const filterProductById = (array , id) => {
         return array.map( (data) => {
@@ -33,6 +34,7 @@ const JuegosDetails = () => {
                 <p className='info_text'>Precio: ${data.precio}</p>
                 <p className='info_subtitle'>DESCRIPCION</p>
                 <p className='info_text_detail_text'>{data.description} </p>
+
 
 
                 <Button className='detail__btn-buy'>COMPRAR</Button>
