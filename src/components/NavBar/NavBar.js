@@ -3,7 +3,7 @@ import Button from '@mui/material/Button'
 import {Link} from "react-router-dom";
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
-import cartImg from '../../imagenes/carritodecompras.png'
+
 
 function NavBar() {
     return(
@@ -37,7 +37,9 @@ function NavBar() {
                 </Button>
             </li>
         </ul>
-        <Link to="/carrito"> <img src={cartImg}/></Link> 
+        <Link to="/carrito"> 
+            <CartWidget/>
+        </Link> 
        
      </header>
     )

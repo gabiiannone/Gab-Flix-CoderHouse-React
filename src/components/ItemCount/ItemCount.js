@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {Button} from "react-bootstrap";
+import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemCount = ({initial, stock, onAdd}) => {
 
@@ -15,18 +16,18 @@ const ItemCount = ({initial, stock, onAdd}) => {
     }
 
 
-        //setCount(count + num);
+       // setCount(count + num);
 
-       // if(count < stock) {
-          //  setCount(count + 1 )
-       // }
+        //if(count < stock) {
+         //  setCount(count + 1 )
+        //}
        
-    
+       <ItemDetail/>
 
     return(
-
+        <div className='container_contador'>
         <div className='contador'>
-        <>
+        
         <button
             className="botonCount"
             onClick={() => remProduct(-1)}
@@ -42,23 +43,23 @@ const ItemCount = ({initial, stock, onAdd}) => {
              disabled={count === stock ? true : null}
         > + 
         </button>
-        <>
+        
+        </div>
+
         <br></br>
 
-        <button
-             className="botonAgregar"
+        <button className="botonAgregar"
+             
              onClick={() => onAdd(count)}
              disabled={stock === 0 ? true : null}
-        > 
+             >
         Agregar 
         </button>
-        
-        </>
-        
 
-        </>
+        
+       
         </div>
-    
+       
     );
 }
 

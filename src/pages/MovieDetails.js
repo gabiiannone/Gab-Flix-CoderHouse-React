@@ -27,7 +27,7 @@ export function MovieDetails() {
                <strong>Genre: </strong> {pelicula.genres.map(genre => genre.name).join(" ,")}
             </p>
             <p><strong>Description: </strong>  {pelicula.overview}</p>
-            <button className={`${styles.col} ${styles.moviedetails}`} >Iniciar</button>
+            <button className={`${styles.col} ${styles.moviedetails} ${styles.botonAgregar}`} >Iniciar</button>
         </div>
 
         </div>

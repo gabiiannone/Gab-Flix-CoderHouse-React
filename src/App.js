@@ -6,12 +6,13 @@ import NavBar from "./components/NavBar/NavBar";
 import "./logo.svg";
 import ItemListContainer from "./components/ItemListContainer/ItemListcontainer";
 import  {PelisGrid}  from "./components/Peliculas/PelisGrid";
-import ItemDetailContainer from './components/ItemDetailcontainer/ItemDetailContainer';
+
 import NotFoundPage from "./pages/NotFoundPage";
 import { MovieDetails } from "./pages/MovieDetails";
 import JuegosDetails from "./pages/JuegosDetails";
-import { CartProvider } from "./components/CartWidget/CartContext";
+
 import CartWidget from "./components/CartWidget/CartWidget";
+import CartProvider from "./context/CartContext";
 
 
 
@@ -19,30 +20,31 @@ import CartWidget from "./components/CartWidget/CartWidget";
 function App() {
   return (
     <CartProvider>
-    <BrowserRouter>
-        <div   className="App">
+
+      <BrowserRouter>
+          <div   className="App">
        
-        <NavBar />
+          <NavBar />
            
-        <Routes>
+          <Routes>
         
-        <Route path="/" element={  <h1  class="titulos" >BIENVENIDOS</h1> }  />
-        <Route path="/registrarse" element={ <h1  class="titulos" >REGISTRARSE</h1> }  />
-        <Route path="/iniciar_sesion" element={ <h1 class="titulos"  >INICIAR SESION</h1> }  />
-        <Route path="/peliculas" element={ <PelisGrid/> }  />
-        <Route path="/peliculas/:peliculaId" element={ <MovieDetails/> }  />
-        <Route path="series" element={ <h1 class="titulos"  >SERIES</h1> }  />
-        <Route path="/video_juegos" element={ <ItemListContainer /> }  />
-        <Route path="/video_juegos/:id" element={<JuegosDetails/> }  />
-        <Route path="/carrito/:id" element={ <CartWidget/> }  />
-        <Route path="*" element={ <NotFoundPage /> }  />
+          <Route path="/" element={  <h1  class="titulos" >BIENVENIDOS</h1> }  />
+          <Route path="/registrarse" element={ <h1  class="titulos" >REGISTRARSE</h1> }  />
+          <Route path="/iniciar_sesion" element={ <h1 class="titulos"  >INICIAR SESION</h1> }  />
+          <Route path="/peliculas" element={ <PelisGrid/> }  />
+          <Route path="/peliculas/:peliculaId" element={ <MovieDetails/> }  />
+          <Route path="series" element={ <h1 class="titulos"  >SERIES</h1> }  />
+          <Route path="/video_juegos" element={ <ItemListContainer /> }  />
+          <Route path="/video_juegos/:id" element={<JuegosDetails/> }  />
+          <Route path="/carrito" element={ <CartWidget/> }  />
+          <Route path="*" element={ <NotFoundPage /> }  />
         
-      </Routes>
-       </div>
+          </Routes>
+            </div>
      
-    </BrowserRouter>
-   
+        </BrowserRouter>
     </CartProvider>
+   
   );
 }
 

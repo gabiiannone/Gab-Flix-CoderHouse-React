@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
             setDataProduct(producto)
          
         }). finally( () => {
-          
+          console.log("Termino la llamada")
         })
     }, [])
 

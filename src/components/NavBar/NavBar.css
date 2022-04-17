@@ -50,3 +50,12 @@
   text-decoration: dotted;
   border-style:dashed;
 }
+
+.itemTotal{
+  border-radius: 50%;
+  padding: 0rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: black;
+  color:rgb(114, 114, 187);;
+}

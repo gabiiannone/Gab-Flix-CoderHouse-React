@@ -2,7 +2,8 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import productList  from '../components/Utils/productos';
+import {productList}  from '../components/Utils/productos';
+import ItemCount from '../components/ItemCount/ItemCount';
 
 const JuegosDetails = () => {
     
@@ -25,7 +26,7 @@ const JuegosDetails = () => {
         <Container className="container_general">
             <div className="container_detail">
             <div className='container_detail_img'>
-                <img  src={data.imagen} alt="spiderman"/>
+                <img  src={data.imagen} alt=""/>
             </div>
             <div className='container_detail_info'>
                 <h3 className='info_title'>{data.titulo}</h3>
@@ -35,9 +36,9 @@ const JuegosDetails = () => {
                 <p className='info_subtitle'>DESCRIPCION</p>
                 <p className='info_text_detail_text'>{data.description} </p>
 
+            <ItemCount/>
 
-
-                <Button className='detail__btn-buy'>COMPRAR</Button>
+                
 
             </div>
             </div>

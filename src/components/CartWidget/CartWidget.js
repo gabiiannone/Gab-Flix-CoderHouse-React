@@ -1,25 +1,23 @@
 import cartImg from '../../imagenes/carritodecompras.png'
-import { CartContext } from './CartContext'
 import React, {useContext} from 'react'
+import { CartContext } from '../../context/CartContext';
+
 
 const CartWidget = () => {
-    const { items, addItem} = useContext(CartContext);
-    console.log(items);
+   
+    const cartContext = useContext(CartContext);
+    const {cart} = cartContext;
+    
     return(
+      <div className='carrito'>
+         
+         <img src={cartImg}/>
+           
+        <span className='itemTotal'>0</span>
 
-        <div className="carrito"> 
-          {
-              items.map((data) => (
-                <div key={data.id}>
-                  <h1>{data.title}</h1>
-              
-                </div>
-              ))
-          }
+      </div>
 
-        </div>
-       
-    )
-}
+    );  
+};
 
 export default CartWidget

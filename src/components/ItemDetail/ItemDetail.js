@@ -1,18 +1,27 @@
 import Button from '@mui/material/Button';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import  Container  from '@mui/material/Container';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../../context/CartContext';
 
 
 
-const ItemDetail = ({data,stock,onAdd}) => {
+const ItemDetail = ({data}) => {
+    
+   const cartContext = useContext(CartContext);
+   const {cart, addToCart} = cartContext; 
    
+   const onAdd = (count) => {
+       addToCart(data, count)
+   }  
+
+
     return(
 
         <Container className="container_general">
             <div className="container_detail">
             <div className='container_detail_img'>
-                <img  src={data.imagen} alt="spiderman"/>
+                <img  src={data.imagen} alt=""/>
             </div>
             <div className='container_detail_info'>
                 <h3 className='info_title'>{data.titulo}</h3>
@@ -23,7 +32,7 @@ const ItemDetail = ({data,stock,onAdd}) => {
                 <p className='info_text_detail_text'>{data.description} </p>
 
 
-                <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
+                <ItemCount stock={data.stock} onAdd={onAdd} initial={1}/>
 
 
             </div>

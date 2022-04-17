@@ -3,7 +3,7 @@
     color: antiquewhite;
     justify-content: center;
     flex-wrap: wrap;
-
+    text-align: center;
 }
 
 .col{
@@ -23,4 +23,17 @@
 
 .primerItem{
     margin-top: 0;
+}
+
+.botonAgregar{
+  background-color: rgb(94, 94, 173);
+  border: none;
+  font-family: var(--mulish-font);
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 10px auto;
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+ 
 }
