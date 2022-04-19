@@ -38,7 +38,7 @@ function NavBar() {
             </li>
         </ul>
         <Link to="/carrito"> 
-            <CartWidget/>
+        <CartWidget/>
         </Link> 
        
      </header>

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Button} from "react-bootstrap";
-import ItemDetail from '../ItemDetail/ItemDetail';
+import JuegosDetails from '../../pages/JuegosDetails';
 
 const ItemCount = ({initial, stock, onAdd}) => {
 
@@ -22,7 +22,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
          //  setCount(count + 1 )
         //}
        
-       <ItemDetail/>
+       <JuegosDetails/>
 
     return(
         <div className='container_contador'>
