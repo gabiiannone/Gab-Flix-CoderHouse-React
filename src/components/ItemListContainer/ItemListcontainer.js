@@ -13,7 +13,7 @@ const ItemListContainer = () => {
         <div className="container-cards">
         <h1  class="titulos" >VIDEO JUEGOS</h1>   
            
-                <ItemList />
+                <ItemList data />
                
             
         </div>

@@ -21,7 +21,7 @@ const ItemDetail = ({data}) => {
         <Container className="container_general">
             <div className="container_detail">
             <div className='container_detail_img'>
-                <img  src={data.imagen} alt=""/>
+                <img  src={data.imagen} width={300} alt=""/>
             </div>
             <div className='container_detail_info'>
                 <h3 className='info_title'>{data.titulo}</h3>

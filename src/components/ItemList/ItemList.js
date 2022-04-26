@@ -29,8 +29,8 @@ const ItemList = () => {
     }
   
     
-   // const getProducts = new Promise((resolve, reject) => {
-     // setTimeout(() => {
+    //const getProducts = new Promise((resolve, reject) => {
+    // setTimeout(() => {
        // resolve(productList);
       //}, 2000);
     //});
@@ -38,7 +38,7 @@ const ItemList = () => {
    
     const getProductsFromDB = async () => {
       try {
-        const result = await getProducts;
+        const result = await getProducts();
         setProducts(result);
       } catch (error) {
         console.log(error);

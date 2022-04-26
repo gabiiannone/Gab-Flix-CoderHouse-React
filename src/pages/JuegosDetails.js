@@ -8,6 +8,7 @@ import ItemCount from '../components/ItemCount/ItemCount';
 import {doc, getDoc} from "firebase/firestore";
 import db from "../firebase";
 import { CartContext } from '../context/CartContext';
+import ItemDetail from '../components/ItemDetail/ItemDetail';
 
 
 const JuegosDetails = () => {
@@ -41,18 +42,18 @@ const JuegosDetails = () => {
     }, [id])
 
     //const filterProductById = (array , id) => {
-       // return array.map( (data) => {
-           // if(data.id == id) {
-             //   return setProduct(data)
-            //}
-       // })
-    //}
+      //  return array.map( (data) => {
+        //    if(data.id == id) {
+          //      return setProduct(data)
+           // }
+        //})
+   // }
     
     return(
         <Container className="container_general">
             <div className="container_detail">
             <div className='container_detail_img'>
-                <img  src={data.imagen} alt=""/>
+                <img  src={data.imagen} width={300} alt=""/>
             </div>
             <div className='container_detail_info'>
                 <h3 className='info_title'>{data.titulo}</h3>
@@ -62,9 +63,9 @@ const JuegosDetails = () => {
                 <p className='info_subtitle'>DESCRIPCION</p>
                 <p className='info_text_detail_text'>{data.description} </p>
 
-                <ItemCount />
 
-                
+                <ItemCount stock={data.stock} onAdd={onAdd} initial={1}/>
+
 
             </div>
             </div>

@@ -2,21 +2,33 @@ import styles from "../components/Peliculas/PeliDetails.module.css";
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
 import { httpGet } from "../components/Utils/httpClient";
+import { Spinner } from "../components/Peliculas/spinner";
 
 export function MovieDetails() {
     const {peliculaId} = useParams(); 
+    const [isLoading, setIsLoading] = useState(true); 
+
     const [pelicula, setPelis] = useState(null);
+
     useEffect(() => {
+        setIsLoading(true);
        
         httpGet("/movie/" + peliculaId).then(data =>{
-            setPelis(data)
+            setIsLoading(false);
+            setPelis(data);
 
         })  
     }, [peliculaId]);
 
+    if (isLoading) {
+        return <Spinner />;
+    }
+
     if (!pelicula) {
         return null;
     }
+
+    
 
     const imageUrl = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path;
     return (<div className={styles.detailsContainer} >

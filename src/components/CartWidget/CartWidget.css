@@ -1,0 +1,164 @@
+
+.carritos h2{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.carritos h3{
+    font-size: 1rem;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.carrito_close h2{
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    padding-block-end: 20px;
+}
+
+
+
+.carrito.show{
+    visibility: visible;
+
+}
+
+.price{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.carritos.show{
+    transform: translate(-50%, -50%)
+    scale(1.1);
+    opacity: 1;
+    visibility: hidden;
+}
+
+.carrito_close box-icon{
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+   transform: all 300ms ease-in-out;
+   margin: 3rem 0 0 2rem;
+    
+} 
+
+.carrito_close box-icon:hover{
+    fill: rgb(94, 94, 173);
+}
+
+.carrito_center{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #F87;
+
+}
+
+.carrito_item{
+    color: azure;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 1px 10px #F87;
+    border-radius: 5px;
+}
+
+.carrito_item img{
+    width: 9rem;
+    
+}
+
+.carrito_item h3{
+    margin-top: 1.5rem;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.carrito_item .price{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: start;
+    margin-left: -1rem;
+}
+
+.carrito_item box-icon{
+    fill: rgb(94, 94, 173);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: .3rem;
+}
+
+.carrito_item .cantidad{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.carrito__footer{
+    text-align: center;
+    margin-bottom: 3rem;
+    color:azure;
+
+}
+
+.carrito__footer h3{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn{
+    display: inline-block;
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: #F87;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium';
+
+}
+
+.btn:hover{
+    background-color:  rgb(94, 94, 173); 
+    color: white;
+}
+.remove__item box-icon{
+    width:100px; 
+    height:100px; 
+    margin-top:4rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .carrito_item{
+        width: 92%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .carritos.show{
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+    .carrito_item h3{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .carrito_item h3{
+        font-size: .5rem;
+    }
+}

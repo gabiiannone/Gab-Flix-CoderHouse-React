@@ -11,7 +11,7 @@
   
   ul.navbar li{
     align-items: center;
-    margin-right: 15px;
+    margin-right: 10px;
     
    }
    ul.navbar li button{
@@ -57,5 +57,6 @@
   font-size: 1.5rem;
   font-weight: 700;
   background-color: black;
-  color:rgb(114, 114, 187);;
+  color:rgb(114, 114, 187);
+  
 }
