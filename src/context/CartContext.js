@@ -1,64 +1,36 @@
 import React from "react";
 import {createContext, useState, useContext} from "react";
 
-export const CartContext = createContext(null);
+const CartContext = createContext();
 
 
 
-const CartProvider = (props) => {
+const CartProvider = ({children}) => {
 
-    const [cart, setCart] = useState([])
-    const [total, setTotal] = useState([0])
+    const [cartProducts, setCartProducts] = useState([]);
 
-    const addToCart = (data, count) => {
+    const addProductToCart = (product) => {
+        console.log("Agregar producto al carrito", product)
 
-       
-
-        if(cart.some(el => el.id === data.id)){
-
-            let index = cart.findIndex (el => el.id === data.id );
-            let product = cart[index];
-            product.data = product.count + count;
-
-            const newCart = [...cart];
-            newCart.splice( index, 1, product ); 
-            setCart([...newCart ]); 
-
-        }else{
-
-            let product = {...data, count};
-            setCart([...cart, product ]); 
-        }
-
-        
     }
+    const data = {
+        cartProducts,
+        addProductToCart 
 
-    const deleteCartById = (id) =>{
-        let index = newCart.findIndex(el => el.id === id);
-        const newCart = [...cart];
-      
-        newCart.splice( index, 1 ); 
-        setCart([...newCart]);
     }
-
-    const deleteCart = () => {
-
-        setCart([]);
-    }
-
+   
 
     
     return (
         <CartContext.Provider
             value={{ 
-                    cart, 
-                    setCart,
-                    addToCart,
+                    data
                    }} 
         >
-           {props.children}
+           {children}
         </CartContext.Provider>
     )
 }
 
+export { CartContext };
 export default CartProvider;

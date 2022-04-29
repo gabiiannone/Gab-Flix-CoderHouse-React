@@ -1,6 +1,7 @@
 
 .cards-items{
   object-fit: contain;
+  flex-direction: row;
   float: left;
   border: 1px solid rgb(94, 94, 173);
   width: 200px;

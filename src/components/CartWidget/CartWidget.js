@@ -6,8 +6,9 @@ import "./CartWidget.css";
 
 const CartWidget = () => {
    
-    const cartContext = useContext(CartContext);
-    const {cart} = cartContext;
+  const { cartProducts } = useContext(CartContext)
+
+
     
     return(
       <div className='carrito.show'>
@@ -15,33 +16,38 @@ const CartWidget = () => {
            <div className='carrito_close'>
            <h2>Su carrito</h2>
            
-              <box-icon name="x"></box-icon>
+              <box-icon name="x" ></box-icon>
              
             </div>
             
             <div className='carrito_center'>
-
-                <div className='carrito_item'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyYPnOabDAeXGojINyrCx6O--7tFiJm_RMz8BpeDsHjfhfSKBTQKMZhZWLciXuWoGqBE&usqp=CAU"/>  
-                  <div>
-                    <h3>Titulo</h3>
-                    <p className='price'>Precio: $</p>
-                  </div>  
-
-                  <div> 
-                    <box-icon name='up-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
-                    <p className='cantidad'>1</p>
-                    <box-icon name='down-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
+              {cartProducts.map( (cartProduct) => {
+                return(
+                  <div className='carrito_item' key={cartProduct.id}>
+                  <img src={cartProduct.imagen}/>  
+                    <div>
+                      <h3 >{cartProduct.titulo}</h3>
+                      <p className='price'> ${cartProduct.precio}</p>
+                    </div>  
+  
+                    <div> 
+                      <box-icon name='up-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
+                      <p className='cantidad'>1</p>
+                      <box-icon name='down-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
+                    </div>
+                    <div className='remove__item'>
+                      <box-icon name='trash'color="rgb(94, 94, 173)"    >
+  
+                      </box-icon>
+                    </div>
+                   
                   </div>
-                  <div className='remove__item'>
-                    <box-icon name='trash'color="rgb(94, 94, 173)"  
-                             >
+               
 
-                    </box-icon>
-                  </div>
+                )
+              } )}
 
                 </div>
-            </div>
             <div className='carrito__footer'>
                <h3>Total: $</h3>  
                <button className='btn'> finalizar compra y pagar</button>

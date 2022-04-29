@@ -1,6 +1,7 @@
 
 import "./App.css";
 import React from "react";
+
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import "./logo.svg";
@@ -12,18 +13,19 @@ import { MovieDetails } from "./pages/MovieDetails";
 import JuegosDetails from "./pages/JuegosDetails";
 
 import CartWidget from "./components/CartWidget/CartWidget";
-import CartProvider from "./context/CartContext";
+import CartProvider, { CartContext } from "./context/CartContext";
 import { PeliPrincipal } from "./components/Peliculas/PeliPrincipal";
 
 
+import Footer from "./components/footer/footer";
 
 
 
 function App() {
   return (
     
-    <CartProvider>
-
+    
+     <CartProvider>
       <BrowserRouter>
           <div   className="App">
           
@@ -47,10 +49,15 @@ function App() {
           <Route path="*" element={ <NotFoundPage /> }  />
         
           </Routes>
+
+          <Footer/>   
             </div>
-     
+        
+      
         </BrowserRouter>
-    </CartProvider>
+        </CartProvider>
+        
+     
    
   );
 }

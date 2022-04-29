@@ -2,6 +2,10 @@ import React,{useState} from 'react';
 import {Button} from "react-bootstrap";
 import JuegosDetails from '../../pages/JuegosDetails';
 
+
+
+
+
 const ItemCount = ({initial, stock, onAdd}) => {
 
     const [count, setCount] = useState(initial);
@@ -15,6 +19,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
         if (count > initial) setCount(count - 1);
     }
 
+    
 
        // setCount(count + num);
 
@@ -48,16 +53,6 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
         <br></br>
 
-        <button className="botonAgregar"
-             
-             onClick={() => onAdd(count)}
-             disabled={stock === 0 ? true : null}
-             >
-        Agregar 
-        </button>
-
-        
-       
         </div>
        
     );

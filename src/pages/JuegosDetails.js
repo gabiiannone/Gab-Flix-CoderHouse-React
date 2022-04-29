@@ -1,24 +1,20 @@
 import Container from '@mui/material/Container';
 import { Navigate, useNavigate } from 'react-router-dom';
-import Button from '@mui/material/Button';
+
 import { useParams } from 'react-router-dom';
 import {useContext, useEffect, useState } from 'react';
-import {productList}  from '../components/Utils/productos';
 import ItemCount from '../components/ItemCount/ItemCount';
 import {doc, getDoc} from "firebase/firestore";
 import db from "../firebase";
 import { CartContext } from '../context/CartContext';
-import ItemDetail from '../components/ItemDetail/ItemDetail';
+
 
 
 const JuegosDetails = () => {
     
-    const cartContext = useContext(CartContext);
-    const {cart, addToCart} = cartContext; 
+    
+    const {cartProducts, addProductToCart} = useContext(CartContext); 
    
-    const onAdd = (count) => {
-       addToCart(data, count)
-    }    
     const { id } = useParams();
     const [data, setProduct] = useState({});
     const navigate = useNavigate();
@@ -37,6 +33,7 @@ const JuegosDetails = () => {
         }
     }
     useEffect( () => {
+      
         getProduct()
        // filterProductById(productList, id)
     }, [id])
@@ -48,6 +45,11 @@ const JuegosDetails = () => {
            // }
         //})
    // }
+
+   const addToCart = (e) => {
+       e.stopPropagation()
+       addProductToCart(data)
+   }
     
     return(
         <Container className="container_general">
@@ -62,17 +64,16 @@ const JuegosDetails = () => {
                 <p className='info_text'>Precio: ${data.precio}</p>
                 <p className='info_subtitle'>DESCRIPCION</p>
                 <p className='info_text_detail_text'>{data.description} </p>
+                
 
 
-                <ItemCount stock={data.stock} onAdd={onAdd} initial={1}/>
-
+                <ItemCount stock={data.stock}  initial={1}/>
+                <button onClick={addToCart} className="botonAgregar" >Comprar </button>
 
             </div>
             </div>
         </Container>
 
     )
-
 }
-  
-export default JuegosDetails 
+export default JuegosDetails

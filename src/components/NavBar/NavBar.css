@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    
+    font-family: "Sigmar One", cursive;
     
     
   }
@@ -12,6 +12,7 @@
   ul.navbar li{
     align-items: center;
     margin-right: 10px;
+    font-family: "Sigmar One", cursive;
     
    }
    ul.navbar li button{

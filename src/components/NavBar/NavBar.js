@@ -4,9 +4,16 @@ import {Link} from "react-router-dom";
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import cartImg from '../../imagenes/carritodecompras.png'
+import { useContext } from "react";
+
+
 
 function NavBar() {
+
+    
     return(
+
+       
      <header className='mainHeader' >
         <div className='containerLogo'>
             <img className="imagenHeader" src="Logo1.png"  />

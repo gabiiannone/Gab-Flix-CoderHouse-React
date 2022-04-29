@@ -3,20 +3,20 @@
     text-align: center;
     font-size: 2rem;
     color: white;
-    font-family: 'Franklin Gothic Medium';
+    font-family: "Sigmar One", cursive;
 }
 
 .carritos h3{
     font-size: 1rem;
     color: white;
-    font-family: 'Franklin Gothic Medium';
+    font-family: "Sigmar One", cursive;
 }
 
 .carrito_close h2{
     font-size: 2rem;
     text-align: center;
     color: white;
-    font-family: 'Franklin Gothic Medium';
+    font-family: "Sigmar One", cursive;
     padding-block-end: 20px;
 }
 
@@ -30,7 +30,7 @@
 .price{
     color: white;
     font-size: 1rem;
-    font-family: 'Franklin Gothic Medium';
+    font-family: "Sigmar One", cursive;
 }
 
 .carritos.show{
@@ -78,7 +78,7 @@
 
 .carrito_item h3{
     margin-top: 1.5rem;
-    font-family: 'Franklin Gothic Medium';
+    font-family: "Sigmar One", cursive;
     font-weight: 600;
     font-size: 1.5rem;
 }
@@ -124,7 +124,7 @@
     border: 0;
     outline: 0;
     cursor: pointer;
-    font-family: 'Franklin Gothic Medium';
+    font-family: "Sigmar One", cursive;
 
 }
 
