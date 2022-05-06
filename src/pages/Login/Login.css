@@ -1,0 +1,60 @@
+.container_login{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_login{
+    background-color: #F87;
+    font-family: "Sigmar One", cursive;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 0 0 0.2em #F87;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+
+.label_error{
+    font-size: 20px;
+    font-family: "Sigmar One", cursive;
+    color:  rgb(94, 94, 173);
+    width: fit-content;
+    height: fit-content;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.label_alert{
+    font-size: 20px;
+    font-family: "Sigmar One", cursive;
+    color:  rgb(94, 94, 173);
+    width: fit-content;
+    height: fit-content;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.home_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.home_container h1, .home_container label{
+    color: white;
+
+}

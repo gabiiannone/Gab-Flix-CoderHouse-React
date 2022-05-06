@@ -13,7 +13,7 @@ import { CartContext } from '../context/CartContext';
 const JuegosDetails = () => {
     
     
-    const {cartProducts, addProductToCart} = useContext(CartContext); 
+    const {addProductToCart} = useContext(CartContext); 
    
     const { id } = useParams();
     const [data, setProduct] = useState({});
@@ -46,10 +46,10 @@ const JuegosDetails = () => {
         //})
    // }
 
-   const addToCart = (e) => {
-       e.stopPropagation()
-       addProductToCart(data)
-   }
+ //  const addToCart = (e) => {
+   //    e.stopPropagation()
+     //  addProductToCart()
+   //}
     
     return(
         <Container className="container_general">
@@ -68,12 +68,13 @@ const JuegosDetails = () => {
 
 
                 <ItemCount stock={data.stock}  initial={1}/>
-                <button onClick={addToCart} className="botonAgregar" >Comprar </button>
-
+                <button onClick={() => addProductToCart(data)} className="botonAgregar" >Comprar </button>
+                
             </div>
             </div>
         </Container>
-
+        
     )
+    
 }
 export default JuegosDetails

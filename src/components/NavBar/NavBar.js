@@ -47,6 +47,7 @@ function NavBar() {
         <Link to="/carrito"> 
         <img src={cartImg}/>
         <span className='itemTotal'>0</span>
+       
         </Link> 
        
      </header>

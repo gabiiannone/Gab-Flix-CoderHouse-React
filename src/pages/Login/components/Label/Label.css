@@ -1,0 +1,11 @@
+.title_label{
+    font-size: 3rem;
+    
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding-top: 1rem;
+    
+  }

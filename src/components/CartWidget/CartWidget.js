@@ -4,6 +4,7 @@ import { CartContext } from '../../context/CartContext';
 import 'boxicons';
 import "./CartWidget.css";
 
+
 const CartWidget = () => {
    
   const { cartProducts } = useContext(CartContext)
@@ -11,6 +12,8 @@ const CartWidget = () => {
 
     
     return(
+     
+
       <div className='carrito.show'>
         <div className='carritos.show'>
            <div className='carrito_close'>
@@ -57,4 +60,17 @@ const CartWidget = () => {
     );  
 };
 
-export default CartWidget
+
+
+export default CartWidget 
+
+
+
+
+
+
+
+
+
+
+
