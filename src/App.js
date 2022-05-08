@@ -26,8 +26,9 @@ function App() {
   return (
     
     
-    <CartProvider>
+    
       <BrowserRouter>
+      <CartProvider>
           <div   className="App">
           
           <NavBar />
@@ -53,9 +54,9 @@ function App() {
           <Footer/>   
             </div>
         
-      
+            </CartProvider>
         </BrowserRouter>
-       </CartProvider>
+  
         
      
    

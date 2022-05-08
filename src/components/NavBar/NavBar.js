@@ -5,12 +5,13 @@ import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import cartImg from '../../imagenes/carritodecompras.png'
 import { useContext } from "react";
-
+import { CartContext } from "../../context/CartContext";
 
 
 function NavBar() {
 
-    
+    const { cantidad, cartProducts} = useContext(CartContext);
+  
     return(
 
        
@@ -46,7 +47,8 @@ function NavBar() {
         </ul>
         <Link to="/carrito"> 
         <img src={cartImg}/>
-        <span className='itemTotal'>0</span>
+        <span className='itemTotal'>  {cartProducts.length > 0 && cantidad()}</span>
+      
        
         </Link> 
        

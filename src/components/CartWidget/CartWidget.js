@@ -1,25 +1,25 @@
-import cartImg from '../../imagenes/carritodecompras.png'
 import React, {useContext} from 'react'
+
 import { CartContext } from '../../context/CartContext';
 import 'boxicons';
 import "./CartWidget.css";
-
+import Card from "../../imagenes/Logo1.png";
 
 const CartWidget = () => {
    
-  const { cartProducts } = useContext(CartContext)
+  const { cartProducts, deleteOne, emptyCart, sumaTotal } =  useContext(CartContext);
 
 
     
     return(
      
 
-      <div className='carrito.show'>
-        <div className='carritos.show'>
-           <div className='carrito_close'>
+      <div >
+        <div >
+           <div className='carritos'>
            <h2>Su carrito</h2>
            
-              <box-icon name="x" ></box-icon>
+           <box-icon name="x" ></box-icon>
              
             </div>
             
@@ -27,7 +27,7 @@ const CartWidget = () => {
               {cartProducts.map( (cartProduct) => {
                 return(
                   <div className='carrito_item' key={cartProduct.id}>
-                  <img src={cartProduct.imagen}/>  
+                  <img src={cartProduct.imagen} alt=""/>  
                     <div>
                       <h3 >{cartProduct.titulo}</h3>
                       <p className='price'> ${cartProduct.precio}</p>
@@ -35,13 +35,15 @@ const CartWidget = () => {
   
                     <div> 
                       <box-icon name='up-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
-                      <p className='cantidad'>1</p>
+                      <p className='cantidad'>{cartProduct.count}</p>
                       <box-icon name='down-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
                     </div>
-                    <div className='remove__item'>
-                      <box-icon name='trash'color="rgb(94, 94, 173)"    >
-  
-                      </box-icon>
+                    <div >
+                      <button className='remove__item'
+                      onClick={() => deleteOne(cartProduct.id)}
+                      >
+                        Eliminar
+                      </button>
                     </div>
                    
                   </div>
@@ -51,10 +53,18 @@ const CartWidget = () => {
               } )}
 
                 </div>
+
+              { 
+                (cartProducts.length >= 1)
+
+                &&
+
             <div className='carrito__footer'>
-               <h3>Total: $</h3>  
-               <button className='btn'> finalizar compra y pagar</button>
+               <h4>Total: {sumaTotal()}</h4>  
+               <button className='btn' onClick={emptyCart}> Vaciar Carrito</button>
+               <button className='btn'> Finalizar compra y pagar</button>
              </div>
+             }  
         </div>
       </div>
     );  

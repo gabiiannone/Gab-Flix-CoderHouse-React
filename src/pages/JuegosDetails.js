@@ -10,10 +10,11 @@ import { CartContext } from '../context/CartContext';
 
 
 
+
 const JuegosDetails = () => {
     
     
-    const {addProductToCart} = useContext(CartContext); 
+    const {agregarAlCarrito} =  useContext(CartContext);
    
     const { id } = useParams();
     const [data, setProduct] = useState({});
@@ -38,18 +39,6 @@ const JuegosDetails = () => {
        // filterProductById(productList, id)
     }, [id])
 
-    //const filterProductById = (array , id) => {
-      //  return array.map( (data) => {
-        //    if(data.id == id) {
-          //      return setProduct(data)
-           // }
-        //})
-   // }
-
- //  const addToCart = (e) => {
-   //    e.stopPropagation()
-     //  addProductToCart()
-   //}
     
     return(
         <Container className="container_general">
@@ -64,11 +53,12 @@ const JuegosDetails = () => {
                 <p className='info_text'>Precio: ${data.precio}</p>
                 <p className='info_subtitle'>DESCRIPCION</p>
                 <p className='info_text_detail_text'>{data.description} </p>
+
                 
 
 
                 <ItemCount stock={data.stock}  initial={1}/>
-                <button onClick={() => addProductToCart(data)} className="botonAgregar" >Comprar </button>
+                <button onClick={() =>agregarAlCarrito(data)} className="botonAgregar" >Agregar al Carrito </button>
                 
             </div>
             </div>

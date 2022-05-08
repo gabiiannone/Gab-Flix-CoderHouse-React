@@ -24,7 +24,7 @@
 
 .carrito.show{
     visibility: visible;
-
+    color: white;
 }
 
 .price{
@@ -38,7 +38,10 @@
     scale(1.1);
     opacity: 1;
     visibility: hidden;
+    color: white;
 }
+
+
 
 .carrito_close box-icon{
    display: inline-block;
@@ -47,7 +50,7 @@
    cursor: pointer;
    transform: all 300ms ease-in-out;
    margin: 3rem 0 0 2rem;
-    
+   color: white;
 } 
 
 .carrito_close box-icon:hover{
@@ -82,6 +85,7 @@
     font-family: "Sigmar One", cursive;
     font-weight: 600;
     font-size: 1.5rem;
+    color: white;
 }
 
 .carrito_item .price{
@@ -89,6 +93,7 @@
     font-weight: bold;
     text-align: start;
     margin-left: -1rem;
+    color: white;
 }
 
 .carrito_item box-icon{
@@ -97,11 +102,13 @@
     height: 40px;
     cursor: pointer;
     margin-top: .3rem;
+    color: white;
 }
 
 .carrito_item .cantidad{
     font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
 
 .carrito__footer{
@@ -115,6 +122,7 @@
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
+    color: white;
 }
 
 .btn{
@@ -133,11 +141,7 @@
     background-color:  rgb(94, 94, 173); 
     color: white;
 }
-.remove__item box-icon{
-    width:100px; 
-    height:100px; 
-    margin-top:4rem;
-}
+
 
 @media only screen and (max-width: 1000px) {
     .carrito_item{
@@ -162,4 +166,23 @@
     .carrito_item h3{
         font-size: .5rem;
     }
+}
+
+
+.remove__item{
+    width:100px; 
+    height:50px; 
+    margin-top:4rem;
+    background-color:  rgb(94, 94, 173);
+    font-size: 1rem;
+   
+    letter-spacing: 1px;
+    color: white;
+
+}
+
+
+.remove__item:hover{
+    background-color:  rgb(94, 94, 173); 
+    color: rgb(182, 17, 17);
 }
