@@ -5,20 +5,26 @@ import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import "./logo.svg";
-import ItemListContainer from "./components/ItemListContainer/ItemListcontainer";
+
 
 import Login from "./pages/Login/Login";
 
 import NotFoundPage from "./pages/NotFoundPage";
-import { MovieDetails } from "./pages/MovieDetails";
-import JuegosDetails from "./pages/JuegosDetails";
 
+import { PeliPrincipal } from "./components/Peliculas/PeliPrincipal";
+import { MovieDetails } from "./pages/MovieDetails";
+
+import ItemListContainer from "./components/ItemListContainer/ItemListcontainer";
+import JuegosDetails from "./pages/JuegosDetails";
 import CartWidget from "./components/CartWidget/CartWidget";
 import CartProvider, { CartContext } from "./context/CartContext";
-import { PeliPrincipal } from "./components/Peliculas/PeliPrincipal";
+
 
 
 import Footer from "./components/footer/footer";
+
+import SeriePrincipal from "./components/Series/SeriePrincipal";
+import SeriesDetails from "./pages/SeriesDetails";
 
 
 
@@ -42,7 +48,8 @@ function App() {
           <Route path="/peliculas" element={ <PeliPrincipal/> } />
           <Route exact path="/peliculas/:peliculaId" element={ <MovieDetails/> }  />
           
-          <Route path="series" element={ <h1 class="titulos"  >SERIES</h1> }  />
+          <Route path="/series" element={ <SeriePrincipal/> }  />
+          <Route path="/series/:id" element={<SeriesDetails/> }  />
           
           <Route path="/video_juegos" element={ <ItemListContainer /> }  />
           <Route path="/video_juegos/:id" element={<JuegosDetails/> }  />
