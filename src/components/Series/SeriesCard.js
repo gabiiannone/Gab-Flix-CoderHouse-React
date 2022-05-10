@@ -12,9 +12,11 @@ const {imagen,titulo,description,genero,año,id} = data
         }*/
     return(
        
-        <ul className={styles.serieGrid}>
-          <li className={styles.serieCard}>
-        <Link to={"/series/" + data.id}>
+        <div className={styles.serieGrid}>
+        <div className={styles.serieCard}>
+        <Link 
+        
+        to={"/series/" + data.id}>
         <img 
          width={230}
          height={345}
@@ -23,10 +25,13 @@ const {imagen,titulo,description,genero,año,id} = data
          
          
         <p className={styles.titulo}>{data.titulo}</p>
-        </Link>
-        </li>
-        </ul>
+       
         
+
+        </Link>
+         
+        </div>
+        </div>
        
     )
 }

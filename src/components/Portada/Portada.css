@@ -1,0 +1,43 @@
+.portada_container body{
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    
+}
+
+
+
+
+.video{
+
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.portada_container > h2{
+    color: rgb(12, 11, 11);
+    font-size: 40px;
+    text-shadow: 0 0 0.2em #F87;
+    text-align: center;
+    padding-top: 20%;
+}
+
+
+
+.portada_container > p{
+    margin-top: 8px;
+    color: rgb(95, 90, 90);
+    font-size: 20px;
+    text-shadow: 0 0 0.2em #F87;
+    text-align: center;
+}

@@ -39,7 +39,17 @@ const JuegosDetails = () => {
        // filterProductById(productList, id)
     }, [id])
 
-    
+    const onAdd =(count) => {
+        const nuevoItem = {...data, cantidad: count};
+        agregarAlCarrito(nuevoItem);
+
+    }
+
+
+
+
+
+
     return(
         <Container className="container_general">
             <div className="container_detail">
@@ -57,8 +67,8 @@ const JuegosDetails = () => {
                 
 
 
-                <ItemCount stock={data.stock}  initial={1}/>
-                <button onClick={() =>agregarAlCarrito(data)} className="botonAgregar" >Agregar al Carrito </button>
+                <ItemCount stock={data.stock}  initial={1} onAdd={onAdd}/>
+               
                 
             </div>
             </div>

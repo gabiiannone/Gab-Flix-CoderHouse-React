@@ -26,14 +26,19 @@ import Footer from "./components/footer/footer";
 import SeriePrincipal from "./components/Series/SeriePrincipal";
 import SeriesDetails from "./pages/SeriesDetails";
 
+import Portada from "./components/Portada/Portada";
+
+import Slider from "./components/Slider/Slider";
+
 
 
 function App() {
   return (
     
     
-    
+
       <BrowserRouter>
+      
       <CartProvider>
           <div   className="App">
           
@@ -41,7 +46,8 @@ function App() {
           
           <Routes>
         
-          <Route path="/" element={  <h1  class="titulos" >BIENVENIDOS</h1> }  />
+          <Route path="/" element={ <Portada/>  }  />
+         
           <Route path="/registrarse" element={ <h1  class="titulos" >REGISTRARSE</h1> }  />
           <Route path="/iniciar_sesion" element={  <Login/> }  />
           
@@ -58,7 +64,9 @@ function App() {
           <Route path="*" element={ <NotFoundPage /> }  />
         
           </Routes>
+          <Slider/> 
           <Footer/>   
+          
             </div>
         
             </CartProvider>

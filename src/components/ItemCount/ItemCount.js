@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 import {Button} from "react-bootstrap";
 import JuegosDetails from '../../pages/JuegosDetails';
 
@@ -7,7 +7,8 @@ import JuegosDetails from '../../pages/JuegosDetails';
 
 
 const ItemCount = ({initial, stock, onAdd}) => {
-
+    
+   
     const [count, setCount] = useState(initial);
     
 
@@ -20,14 +21,8 @@ const ItemCount = ({initial, stock, onAdd}) => {
     }
 
     
-
-       // setCount(count + num);
-
-        //if(count < stock) {
-         //  setCount(count + 1 )
-        //}
        
-       <JuegosDetails/>
+      
 
     return(
         <div className='container_contador'>
@@ -48,11 +43,13 @@ const ItemCount = ({initial, stock, onAdd}) => {
              disabled={count === stock ? true : null}
         > + 
         </button>
+
+        
         
         </div>
 
         <br></br>
-
+        <button onClick={() =>onAdd(count)}  className="botonAgregar" >Agregar al Carrito </button>
         </div>
        
     );

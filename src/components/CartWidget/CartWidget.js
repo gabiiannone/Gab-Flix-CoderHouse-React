@@ -3,7 +3,7 @@ import React, {useContext} from 'react'
 import { CartContext } from '../../context/CartContext';
 import 'boxicons';
 import "./CartWidget.css";
-import Card from "../../imagenes/Logo1.png";
+
 
 const CartWidget = () => {
    
@@ -34,9 +34,9 @@ const CartWidget = () => {
                     </div>  
   
                     <div> 
-                      <box-icon name='up-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
-                      <p className='cantidad'>{cartProduct.count}</p>
-                      <box-icon name='down-arrow' type="solid" color="rgb(94, 94, 173)"></box-icon>
+                     
+                      <p className='cantidad'>{cartProduct.cantidad}</p>
+                      
                     </div>
                     <div >
                       <button className='remove__item'
@@ -60,7 +60,7 @@ const CartWidget = () => {
                 &&
 
             <div className='carrito__footer'>
-               <h4>Total: {sumaTotal()}</h4>  
+               <h3>Total: $ {sumaTotal()}</h3>  
                <button className='btn' onClick={emptyCart}> Vaciar Carrito</button>
                <button className='btn'> Finalizar compra y pagar</button>
              </div>
